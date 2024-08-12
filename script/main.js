@@ -319,6 +319,25 @@ const animationTimeline = () => {
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
+    let userResponse = prompt("Would you like to go out for dinner with me?");
+
+// Check if the user entered something or canceled the prompt
+if (userResponse !== null) {
+  // If userResponse is not null, it means the user entered something
+  console.log("User's response: " + userResponse);
+
+  // You can use the userResponse variable as needed
+  if (userResponse.toLowerCase() === 'yes') {
+    alert("Great! See you on 14th night then!");
+  } else if (userResponse.toLowerCase() === 'no') {
+    alert("Oh how rude 😑");
+  } else {
+    alert("The response was neither 'yes' nor 'no'.");
+  }
+} else {
+  // If userResponse is null, it means the user canceled the prompt
+  console.log("User canceled the prompt.");
+}
     tl.restart();
     const audio = document.getElementById('myAudio');
     audio.currentTime = 0;

@@ -262,6 +262,8 @@ body {
 @media screen and (max-height: 1000px) {
   .six .hat {
     left: 40%;
+    width: 150px;
+    top: -10%;
   }
 }
 
@@ -307,6 +309,8 @@ body {
 
   .six .hat {
     width: 50px;
+    width:100px;
+    left:65px;
     top: -20px;
   }
 
