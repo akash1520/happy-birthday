@@ -1,3 +1,24 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const audio = document.getElementById('myAudio');
+  const delay = 2000; // 2 seconds
+
+  setTimeout(() => {
+      // Play audio after the delay
+      audio.currentTime = 0; // Reset audio to the start
+      audio.play().then(() => {
+          console.log('Audio is playing');
+      }).catch(error => {
+          // Handle any errors that may occur
+          // console.error('Audio play failed:', error);
+          confirm("Audio play failed, please try again and click immediately after reloading!")
+          // Optionally, provide user feedback
+          alert('Unable to play audio. Please check your browser settings.');
+      });
+  }, delay);
+});
+
+
+
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
@@ -135,7 +156,7 @@ const animationTimeline = () => {
     .to(".idea-3 strong", 0.5, {
       scale: 1.2,
       x: 10,
-      backgroundColor: "rgb(21, 161, 237)",
+      backgroundColor: "rgb(201, 24, 171)",
       color: "#fff"
     })
     .to(".idea-3", 0.7, ideaTextTransLeave, "+=1.5")
@@ -287,7 +308,7 @@ const animationTimeline = () => {
       ".last-smile",
       0.5,
       {
-        rotation: 90
+        rotation: 0
       },
       "+=1"
     );
@@ -299,6 +320,9 @@ const animationTimeline = () => {
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
+    const audio = document.getElementById('myAudio');
+    audio.currentTime = 0;
+    audio.play();
   });
 };
 

@@ -2,6 +2,11 @@ html {
   box-sizing: border-box;
 }
 
+.lydia-dp{
+  height: 400px;
+  width: 400px;
+}
+
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
@@ -219,7 +224,6 @@ body {
 .wish h5 {
   font-weight: lighter;
   font-size: 2rem;
-  margin: 10px 0 0;
 }
 
 .nine p {
@@ -230,6 +234,28 @@ body {
 #replay {
   z-index: 3;
   cursor: pointer;
+  background-color: #007bff; /* Blue background */
+  color: #ffffff; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 24px; /* Add padding */
+  font-size: 16px; /* Increase font size for readability */
+  text-align: center; /* Center text */
+  display: inline-block; /* Make the button fit its content */
+  margin: 10px; /* Space around the button */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words */
+}
+
+#replay:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+#replay:active {
+  background-color: #004494; /* Even darker blue on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Change shadow on click */
 }
 
 /* Media Queries */
